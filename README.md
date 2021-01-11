@@ -44,8 +44,8 @@ It is built with a python [Flask](http://flask.pocoo.org/) backend and a [Node.j
 ##### Run the Docker Container
 * Run `docker run --publish 8000:8000 --name cv_container cv` to a container with the docker image
 
-#####  Access the app
-* Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to use the app
+#####  Access the cycif_viewer
+* Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to use the cycif_viewer
 
 #####  Stop the Container
 * Run `CTRL+C` to access the terminal and run `docker container stop cv_container` 

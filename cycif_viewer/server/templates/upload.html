@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>CyCIF Viewer - Data Upload</title>
+<div class="container" id="upload-parent">
+    <span>Upload Form</span>
+    <div class="sectionContent" id="upload-container">
+        <div class="row">
+            <div class="col">
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="name">Dataset Name:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="name" name="name"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="channel_file">Channel File Path:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="channel_file" name="channel_file"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="label_file">Segmentation File Path:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="label_file" name="label_file"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="csv_file">CSV File:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="file" id="csv_file" name="csv_file"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <input id="upload_button" class="btn btn-secondary" type="submit" name="action"
+                                   value="Upload">
+                        </div>
+                        <div class="col-8">
+                            <div id="progress">
+                                <div class="progress-bar progress-bar-striped active">
+                                    <span id="progress-bar-percentage" class="progress-bar-label">0%</span>
+                                    <span id="progress-bar-current-task" class="progress-bar-label">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../client/src/js/views/progressBar.js" defer></script>
+{% endblock %}

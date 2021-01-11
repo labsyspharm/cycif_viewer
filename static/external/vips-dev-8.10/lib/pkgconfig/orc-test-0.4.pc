@@ -1,9 +1,0 @@
-prefix=/data/inst
-libdir=${prefix}/lib
-includedir=${prefix}/include
-
-Name: orc-test
-Description: Test Library of Optimized Inner Loops Runtime Compiler
-Version: 0.4.31
-Libs: -L${libdir} -lorc-test-0.4 -lm -lorc-0.4
-Cflags: -I${includedir}/orc-0.4

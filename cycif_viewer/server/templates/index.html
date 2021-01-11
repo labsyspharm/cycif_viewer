@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="../client/src/css/viewer.css">
+{% endblock %}
+
+{% block content %}
+
+{% if data.datasource %}
+<title>CyCIF Viewer</title>
+
+<div id="container" class="container">
+    <div id="row" class="row">
+
+        <div class="col" id="channel_list_wrapper">
+            <div id="lowRow1" class="row">
+                <div id="boxHeading1" class="col-auto mr-auto">
+                    <span class="box-heading">Channels</span>
+                </div>
+                <div class="col-auto" id="selected-channels-header-div">
+                    <span class="selected-channels-header" id="num-selected-channels">0</span>
+                    <span class="selected-channels-header">of 4 (Max) Selected</span>
+                </div>
+            </div>
+            <div id="channel_list">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="lds-ellipsis" id="channel_list_loader">
+                        </div>
+                    </div>
+                </div>
+                <div id="channel_list_div">
+                    <ul class="list-group" id="channel_list_group"></ul>
+                </div>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="neighborhood_table_heading">
+                            <button id="neighborhood_dropdown_button" class="btn btn-secondary collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#neighborhood_table_div"
+                                    aria-expanded="true" aria-controls="neighborhood_table_div">
+                                <span id="neighborhood_table_div_label">View Neighborhood List</span>
+                            </button>
+                        </div>
+                        <div id="neighborhood_table_div" class="collapse"
+                             aria-labelledby="neighborhood_table_heading"
+                             data-parent="#accordion">
+                            <div id="neighborhood_table_card" class="card-body">
+                                <table id="neighborhood_table" class="table table-hover">
+                                    <thead id="neighborhood_table_header">
+                                    <tr>
+                                        <th scope="col">id</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Source</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer" id="neighborhood_table_footing">
+                            <button id="save_neighborhood_button"
+                                    class="btn btn-primary" disabled>
+                                <span id="save_neighborhood_label">Save Neighborhood </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col viewer_col" id="openseadragon_wrapper">
+            <span class="box-heading">Viewer</span>
+            <div id="openseadragon">
+                <div id="openseadragon-toolbar">
+                    <div id="toolbar-row" class="row justify-content-end">
+                        <span class="material-icons" id="zoom-in">add</span>
+                        <span class="material-icons" id="zoom-out">remove</span>
+                        <span class="material-icons" id="home">home</span>
+                    </div>
+                </div>
+                <div id="selection-options">
+                    <div class="col">
+                        <div class="row">
+                            <span class="material-icons" id="select_button" data-toggle="tooltip" data-placement="right"
+                                  title="Single Cell Selection">near_me</span>
+                        </div>
+                        <div class="row">
+                            <span class="material-icons" id="lasso_button" data-toggle="tooltip" data-placement="right"
+                                  title="Lasso Selection">gesture</span>
+                        </div>
+                        <div class="row"><span class="material-icons" id="neighborhood_icon" data-toggle="tooltip"
+                                               data-placement="right"
+                                               title="Search for Similar Neighborhoods">search</span>
+                        </div>
+                    </div>
+                    <div class="row" id="similarity_group">
+                        <form>
+                            <label id="neighborhood_similarity_label" for="neighborhood_similarity">
+                                Similarity: </label> <span id="similarity_val">0.8</span>
+                            <input type="range" class="form-control-range" min="0" max="100" value="80"
+                                   id="neighborhood_similarity">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="lds-ellipsis" id="openseadragon_loader">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="legend"></div>
+            </div>
+        </div>
+        <div class="col viewer_col" id="analysis_wrapper">
+            <span id="analysis_label">Analysis</span>
+            <div id="plots_display" class="col">
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h5 id="starplot_label" class="text-center">Neighborhood Composition</h5>
+                    </div>
+                </div>
+                <div class="row" id="starplot_display"></div>
+                <div class="row justify-content-md-center">
+                    <div class="col">
+                        <h5 id="scatterplot_label" class="text-center">Neighborhood Embedding Space</h5>
+                    </div>
+                </div>
+                <div class="row" id="scatterplot_display">
+                    <canvas id="scatter_canvas"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="../client/src/js/main.js" defer></script>
+{% endif %}
+{% endblock %}
+
+

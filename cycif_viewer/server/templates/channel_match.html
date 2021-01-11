@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<title>CyCIF Viewer - Channel Match</title>
+<div id="channel-match-root" class="container">
+    <div id="channel-match-container" class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-auto channel-match-title">
+                <h2>{{ data.datasetName }}: Config</h2>
+            </div>
+            <div class="col-auto ml-auto" id="save-col">
+                <button id="save" type="button" class="btn btn-secondary save-config">Save Config</button>
+            </div>
+        </div>
+        <div id="normalize-row">
+            <div class="form-check normalize-form">
+                <label class="form-check-label" for="normalize-csv">Normalize CSV</label>
+                <input type="checkbox" class="form-check-input" id="normalize-csv">
+            </div>
+        </div>
+        <div id="list-titles" class="row">
+            <div id="left-list-title" class="col-3 title-div">
+                <span class="left-title title">Destination</span>
+            </div>
+            <div id="middle-list-title" class="col-auto title-div"></div>
+            <div id="right-list-title" class="col-8 title-div">
+                <div class="row">
+                    <div class="col-3">
+                        <span id="csv-header-list-title" class="left-title title col-2">CSV Header</span>
+                    </div>
+                    <div class="col-6 substring-container">
+                        <input type="text" id="substring" name="substring">
+                        <button type="button" id="remove-substring" class="btn btn-secondary">Remove Text from Display
+                            Name
+                        </button>
+                    </div>
+                    <span id="drag-elements-into-order"
+                          class="right-title col-auto pull-right">Drag Elements Into Order</span>
+                </div>
+            </div>
+        </div>
+        <form id="channel-form">
+            <div id="shared-lists" class="row">
+                <div id="left-list" class="list-group col-3"></div>
+                <div id="middle-list" class="list-group col-auto"></div>
+                <div id="right-list" class="list-group col-8"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../client/src/js/views/channelMatch.js"></script>
+<script type="text/javascript" defer>
+    <!--@formatter:off-->
+        channelData = passVariablesToFrontend({{data|tojson}});
+        channelMatch(channelData);
+        <!--@formatter:on-->
+</script>
+{% endblock %}
+

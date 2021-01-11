@@ -1,0 +1,93 @@
+Traceback (most recent call last):
+  File "save_umap_cosine.py", line 1, in <module>
+    from sklearn.neighbors import BallTree
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/__init__.py", line 80, in <module>
+    from .base import clone
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/base.py", line 21, in <module>
+    from .utils import _IS_32BIT
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/utils/__init__.py", line 23, in <module>
+    from .class_weight import compute_class_weight, compute_sample_weight
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/utils/class_weight.py", line 7, in <module>
+    from .validation import _deprecate_positional_args
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/utils/validation.py", line 25, in <module>
+    from .fixes import _object_dtype_isnan, parse_version
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/sklearn/utils/fixes.py", line 18, in <module>
+    import scipy.stats
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/scipy/stats/__init__.py", line 388, in <module>
+    from .stats import *
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/scipy/stats/stats.py", line 180, in <module>
+    from . import distributions
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/scipy/stats/distributions.py", line 8, in <module>
+    from ._distn_infrastructure import (entropy, rv_discrete, rv_continuous,
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/scipy/stats/_distn_infrastructure.py", line 26, in <module>
+    from scipy import integrate
+  File "/n/home07/swarchol/.conda/envs/hood/lib/python3.7/site-packages/scipy/integrate/__init__.py", line 92, in <module>
+    from .quadpack import *
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 963, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 906, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1280, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1252, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1394, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 95, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 81, in _path_stat
+KeyboardInterrupt
+full_weighted_umap_cosine_10neighbors_02dist
+skipping
+--- 8.20159912109375e-05 seconds ---
+full_weighted_umap_cosine_10neighbors_08dist
+skipping
+--- 1.5735626220703125e-05 seconds ---
+full_weighted_umap_cosine_100neighbors_02dist
+skipping
+--- 2.7894973754882812e-05 seconds ---
+full_weighted_umap_cosine_100neighbors_08dist
+skipping
+--- 1.5020370483398438e-05 seconds ---
+full_weighted_umap_cosine_200neighbors_02dist
+Mapped full_weighted_umap_cosine_200neighbors_02dist Time: 19251.871376991272
+--- 19252.232410669327 seconds ---
+full_weighted_umap_cosine_200neighbors_08dist
+Mapped full_weighted_umap_cosine_200neighbors_08dist Time: 18795.671746969223
+--- 18796.028604745865 seconds ---
+full_weighted_umap_euclidean_10neighbors_02dist
+skipping
+--- 0.002476930618286133 seconds ---
+full_weighted_umap_euclidean_10neighbors_08dist
+skipping
+--- 0.0023729801177978516 seconds ---
+full_weighted_umap_euclidean_100neighbors_02dist
+Mapped full_weighted_umap_euclidean_100neighbors_02dist Time: 10297.795427322388
+--- 10298.15576839447 seconds ---
+full_weighted_umap_euclidean_100neighbors_08dist
+Mapped full_weighted_umap_euclidean_100neighbors_08dist Time: 11792.154299736023
+--- 11792.523454666138 seconds ---
+full_weighted_umap_euclidean_200neighbors_02dist
+Mapped full_weighted_umap_euclidean_200neighbors_02dist Time: 13597.848950386047
+--- 13598.21693944931 seconds ---
+full_weighted_umap_euclidean_200neighbors_08dist
+Mapped full_weighted_umap_euclidean_200neighbors_08dist Time: 14091.295056581497
+--- 14091.660461187363 seconds ---
+Traceback (most recent call last):
+  File "save_umap_cosine.py", line 4, in <module>
+    import umap
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/umap/__init__.py", line 1, in <module>
+    from .umap_ import UMAP
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/umap/umap_.py", line 27, in <module>
+    import numba
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/numba/__init__.py", line 19, in <module>
+    from numba.misc.special import (
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/numba/misc/special.py", line 3, in <module>
+    from numba.core.typing.typeof import typeof
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/numba/core/typing/__init__.py", line 1, in <module>
+    from .context import BaseContext, Context
+  File "/opt/miniconda3/envs/viewer/lib/python3.7/site-packages/numba/core/typing/context.py", line 12, in <module>
+    from numba.core.typing import templates
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+KeyboardInterrupt

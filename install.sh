@@ -1,0 +1,1 @@
+PyInstaller -F --paths $env:CONDA_PREFIX  --hidden-import "scipy.spatial.transform._rotation_groups" --add-data "static:static" --add-data "server:server" --add-data "templates:templates" --name replace_with_filename_to_generate app.py

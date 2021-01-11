@@ -1,0 +1,30 @@
+#comparison_title {
+    margin-top: 5px;
+}
+
+.compare_row {
+    height: 28vh;
+}
+
+#comparison_div .compare_col {
+    padding: 0;
+}
+
+.compare_plot_body {
+    height: 90%;
+    width: 100%;
+}
+
+.compare_plot_title {
+    height: 10%;
+    width: 100%;
+}
+
+#comparison_div h5 {
+    font-size: 0.8rem;
+}
+
+#phenotype_list .list-group-item {
+    padding: 10px 5px;
+    font-size: 0.6rem;
+}
