@@ -2,6 +2,10 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.minerva-analysis-logo {
+    width: 180px;
+}
+
 /*LOADING SPINNER SECTION*/
 .lds-ellipsis {
     display: inline-block;
